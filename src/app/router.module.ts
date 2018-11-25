@@ -5,7 +5,12 @@ import { ViewComponent } from './components/view/view.component';
 
 export const appRoutes: Routes = [
   { path: 'create',
-    component: CreateComponent
+    component: CreateComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/create',
+    pathMatch: 'full'
   },
   { path: 'read',
     component: ReadComponent
