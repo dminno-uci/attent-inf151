@@ -1,3 +1,6 @@
+Angular framework + firebase database.
+
+
 Dependencies:
 1. npm
 2. node
