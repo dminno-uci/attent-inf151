@@ -1,0 +1,52 @@
+body {
+  background-color: #f1f2f6;
+}
+
+.body-container {
+  height: 100vh;
+  position: relative;
+}
+
+/* Start Nav Style */
+#main-nav {
+  padding: 20px 0 20px 0;
+  background-color: #0063A4;
+  color: white;
+ }
+
+.nav-pills .nav-link.active {
+  background-color: #FFD301;
+  color: #0063A4;
+}
+
+.nav-pills .nav-link {
+  color: white;
+  font-weight: bolder;
+}
+/* End Nav Style */
+
+/* Start Form Box Style */
+textarea {
+  resize: none;
+}
+
+.inner-body {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-55%);
+  border: 1px solid grey;
+  padding: 65px 50px 50px 50px;
+  border-radius: .5rem;
+  background-color: #ffffff;
+  min-width: 750px;
+}
+
+.logo-container {
+  margin-bottom: 35px;
+}
+
+.submission-input {
+  background-color: #f1f2f6;
+}
+/* End Form Box Style */

@@ -1,0 +1,24 @@
+<nav id="main-nav">
+  <ul class="nav nav-pills justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="/create">Tell Your Story</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="/read">Read Anonymous Stories</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="/view">View Story Data</a>
+    </li>
+  </ul>
+</nav>
+
+<table class="table table-striped">
+  <tr>
+    <th>Student Year</th>
+    <th>Submission</th>
+  </tr>
+  <tr *ngFor="let share of shares | async">
+    <td>{{ share.year }}</td>
+    <td>{{ share.submission }}</td>
+  </tr>
+</table>
