@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
+import { filter, map, tap } from 'rxjs/operators';
+import { SubmitEntrance } from '../type/data';
 
 @Injectable()
 export class ShareService {
@@ -16,5 +18,13 @@ export class ShareService {
 
   getShares(path): Observable<any[]> {
     return this.db.list(path).valueChanges();
+  }
+
+  searchShares(path, key): Observable<any[]> {
+    return this.db.list(path).valueChanges().pipe(
+      // tap(val => console.log(val)),
+      map(result =>
+        result.filter((one: SubmitEntrance) => one.submission.toLowerCase().includes(key.toLowerCase()))
+      ));
   }
 }
