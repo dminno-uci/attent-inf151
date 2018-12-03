@@ -16,8 +16,8 @@ export class ShareService {
     console.log('Success');
   }
 
-  getShares(path): Observable<any[]> {
-    return this.db.list(path).valueChanges();
+  getShares(path, amount): Observable<any[]> {
+    return this.db.list(path, ref => ref.limitToLast(amount)).valueChanges();
   }
 
   searchShares(path, key): Observable<any[]> {

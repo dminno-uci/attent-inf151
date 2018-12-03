@@ -1,25 +1,105 @@
-.search-container {
-  float: right;
+/* Start Search Styles */
+
+.search-input {
+  width: 100%;
+  height:100%;
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #575756;
+  background-color: transparent;
+  /*background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg);*/
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
-input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
+.search-input::placeholder {
+   color: color(#575756 a(0.8));
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+ }
+
+.search-input:hover,
+.search-input:focus {
+   padding: 12px 0;
+   outline: 0;
+   border: 1px solid transparent;
+   border-bottom: 1px solid #575756;
+   border-radius: 0;
+   background-position: 100% center;
+ }
+
+.search-button {
+  padding-left: 0;
+}
+
+.search-button button {
+  height: 100%;
+  background: transparent;
   border: none;
 }
 
-.search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
+.search-button button i {
+  font-size: 25px;
+  color: grey;
+}
+
+.search-button button i:hover {
   cursor: pointer;
 }
 
-.search-container button:hover {
-  background: #ccc;
+#read-title-row {
+  padding:40px 0 40px 0;
 }
+
+/*.search-container {*/
+  /*!*float: right;*!*/
+/*}*/
+
+/*input[type=text] {*/
+  /*padding: 6px;*/
+  /*margin-top: 8px;*/
+  /*font-size: 17px;*/
+  /*border: none;*/
+/*}*/
+
+/*.search-container button {*/
+  /*float: right;*/
+  /*padding: 6px 10px;*/
+  /*margin-top: 8px;*/
+  /*margin-right: 16px;*/
+  /*background: #ddd;*/
+  /*font-size: 17px;*/
+  /*border: none;*/
+  /*cursor: pointer;*/
+/*}*/
+
+/*.search-container button:hover {*/
+  /*background: #ccc;*/
+/*}*/
+
+/* End Search Styles */
+
+
+#read-card {
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: .5rem;
+  background-color: #ffffff;
+  min-width: 750px;
+  min-height: 200px;
+  margin-bottom: 25px;
+}
+
+
+
