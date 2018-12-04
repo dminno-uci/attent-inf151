@@ -18,7 +18,7 @@ export class ReadComponent implements OnInit {
   constructor(private shareservice: ShareService) { }
 
   ngOnInit() {
-    this.shares = this.getShares('/submissions');
+    this.shares = this.getShares('/submissions').pipe(map((array) => array.reverse()));
     this.searchKey = '';
   }
   getShares(path) {
