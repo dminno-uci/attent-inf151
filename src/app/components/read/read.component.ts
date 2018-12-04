@@ -13,6 +13,8 @@ export class ReadComponent implements OnInit {
 
   public shares: Observable<any[]>;
   public searchKey: string;
+
+  public page = 1;
   constructor(private shareservice: ShareService) { }
 
   ngOnInit() {
@@ -20,7 +22,11 @@ export class ReadComponent implements OnInit {
     this.searchKey = '';
   }
   getShares(path) {
-    return this.shareservice.getShares(path, 30);
+    return this.shareservice.getShares(path, 900);
+  }
+
+  onPageChange(event) {
+    this.page = event;
   }
   searchShares(path): void {
     this.shares = this.shareservice.searchShares(path, this.searchKey);

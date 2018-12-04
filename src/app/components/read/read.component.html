@@ -30,7 +30,7 @@
   </div>
 
   <br/>
-  <div *ngFor="let share of shares | async" class="row" id="read-card">
+  <div *ngFor="let share of shares | async | paginate: { itemsPerPage: 30, currentPage: page }" class="row" id="read-card">
     <div *ngIf="share.year == '1st'" class="col-2 align-middle">
       <img src="../assets/img/UCIN-1st.png" height="125px"/>
       <h5>Student</h5>
@@ -54,6 +54,11 @@
     <div class="col-10">
       {{ share.submission }}
     </div>
+  </div>
+
+  <div class="align-middle"><br/></div>
+  <div class="has-text-centered col-7 align-middle">
+    <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
   </div>
 
 </div>

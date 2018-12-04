@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReadComponent } from './components/read/read.component';
 import { ViewComponent } from './components/view/view.component';
 
+import {NgxPaginationModule} from 'ngx-pagination';  // import for pagination
+
 
 @NgModule({
   imports: [
@@ -21,7 +23,8 @@ import { ViewComponent } from './components/view/view.component';
     AngularFireDatabaseModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   declarations: [ AppComponent, CreateComponent, ReadComponent, ViewComponent ],
   bootstrap: [ AppComponent ],

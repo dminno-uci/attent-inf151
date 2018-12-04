@@ -24,6 +24,7 @@
     "core-js": "^2.5.4",
     "csv-parser": "^2.1.0",
     "firebase": "^5.5.9",
+    "ngx-pagination": "^3.2.1",
     "rxjs": "~6.3.3",
     "ts-xlsx": "0.0.11",
     "xlsx": "^0.14.1",
