@@ -1,0 +1,15 @@
+.nav-item {
+  margin:20px 30px 20px;
+  font-size: 120%;
+}
+
+@media screen and (max-width: 640px) {
+  .nav-item{
+      display: block;
+  }
+}
+
+img{
+  max-width:100%;
+  max-height:100%;
+}

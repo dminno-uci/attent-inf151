@@ -1,19 +1,21 @@
-<nav id="main-nav">
-  <ul class="nav nav-pills justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link active" href="/create">Tell Your Story</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/read">Read Anonymous Stories</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/view">View Story Data</a>
-    </li>
-  </ul>
-</nav>
+<div id="nav-tool-bar">
+  <nav id="main-nav">
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="/create">Tell Your Story</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/read">Read Anonymous Stories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/view">View Story Data</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 <div class="container body-container">
   <div class="inner-body" style="text-align:center">
-    <div class="justify-content-center logo-container" >
+    <div class="justify-content-center logo-container">
       <img src="../assets/img/ucinonymous-logo.png" width="500px" />
     </div>
     <div class="container">
@@ -24,7 +26,8 @@
               <label class="col-md-4">Student Year</label>
               <input type="text" class="form-control submission-input" formControlName="year" #year />
             </div>
-            <div *ngIf="angForm.controls['year'].invalid && (angForm.controls['year'].dirty || angForm.controls['year'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['year'].invalid && (angForm.controls['year'].dirty || angForm.controls['year'].touched)"
+              class="alert alert-danger">
               <div *ngIf="angForm.controls['year'].errors.required">
                 year is required.
               </div>
@@ -34,13 +37,15 @@
               <!--<textarea class="form-control" formControlName="submission" rows="10" cols="30"></textarea>-->
               <textarea class="form-control submission-input" formControlName="submission" rows="15" #submission></textarea>
             </div>
-            <div *ngIf="angForm.controls['submission'].invalid && (angForm.controls['submission'].dirty || angForm.controls['submission'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['submission'].invalid && (angForm.controls['submission'].dirty || angForm.controls['submission'].touched)"
+              class="alert alert-danger">
               <div *ngIf="angForm.controls['submission'].errors.required">
                 submission is required.
               </div>
             </div>
             <div class="form-group">
-              <button (click)="addShare(year.value, submission.value)" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary">Submit</button>
+              <button (click)="addShare(year.value, submission.value)" [disabled]="angForm.pristine || angForm.invalid"
+                class="btn btn-primary">Submit</button>
             </div>
           </form>
         </div>

@@ -1,0 +1,10 @@
+@media screen and (max-width: 640px) {
+  .inner-body {
+    margin-top: 60px;
+    min-width: 350px;
+    padding: 5px;
+  }
+  .submission-input {
+    min-width: 330px;
+  }
+}

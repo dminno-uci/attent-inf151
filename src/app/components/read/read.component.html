@@ -16,42 +16,42 @@
 
 <div class="container" id="read-container">
   <div class="row" id="read-title-row">
-    <div class="col-6">
+    <div class="col-12 col-md-6">
       <div class="justify-content-center" >
         <img src="../assets/img/ucinonymous-logo.png" width="400px" />
       </div>
     </div>
-    <div class="search-container col-5">
+    <div class="search-container col-md-5 col-10">
       <input [(ngModel)]="searchKey" type="text" placeholder="Search.." name="search" class="search-input">
     </div>
-    <div class="col-1 search-button">
+    <div class="col-md-1 col-2 search-button">
       <button type="submit" (click)="searchShares('/submissions')"><i class="fa fa-search"></i></button>
     </div>
   </div>
 
   <br/>
-  <div *ngFor="let share of shares | async | paginate: { itemsPerPage: 30, currentPage: page }" class="row" id="read-card">
-    <div *ngIf="share.year == '1st'" class="col-2 align-middle">
+  <div *ngFor="let share of shares | async | paginate: { itemsPerPage: item, currentPage: page }" class="row" id="read-card">
+    <div *ngIf="share.year == '1st'" class="col-md-2 col-12 align-middle">
       <img src="../assets/img/UCIN-1st.png" height="125px"/>
       <h5>Student</h5>
     </div>
-    <div *ngIf="share.year == '2nd'" class="col-2 align-middle">
+    <div *ngIf="share.year == '2nd'" class="col-md-2 col-12  align-middle">
       <img src="../assets/img/UCIN-2nd.png" height="125px"/>
       <h5>Student</h5>
     </div>
-    <div *ngIf="share.year == '3rd'" class="col-2 align-middle">
+    <div *ngIf="share.year == '3rd'" class="col-md-2 col-12  align-middle">
       <img src="../assets/img/UCIN-3RD.png" height="125px"/>
       <h5>Student</h5>
     </div>
-    <div *ngIf="share.year == '4th'" class="col-2 align-middle">
+    <div *ngIf="share.year == '4TH'" class="col-md-2 col-12  align-middle">
       <img src="../assets/img/UCIN-4TH.png" height="125px"/>
       <h5>Student</h5>
     </div>
-    <div *ngIf="share.year != '1st' && share.year != '2nd' && share.year != '3rd' && share.year != '4th'" class="col-2 align-middle">
+    <div *ngIf="share.year != '1st' && share.year != '2nd' && share.year != '3rd'" class="col-md-2 col-12  align-middle">
       <img src="../assets/img/UCIN-peter.png" height="125px"/>
       <h5>Not undergrad student</h5>
     </div>
-    <div class="col-10">
+    <div class="col-md-10 col-12 ">
       {{ share.submission }}
     </div>
   </div>
