@@ -26,9 +26,15 @@ export class ShareService {
 
   searchShares(path, key): Observable<any[]> {
     return this.db.list(path).valueChanges().pipe(
-      // tap(val => console.log(val)),
+      tap(val => console.log(val)),
       map(result =>
-        result.filter((one: SubmitEntrance) => one.submission.toLowerCase().includes(key.toLowerCase()))
+        result.filter((one: SubmitEntrance) => {
+          if (one.submission) {
+            return one.submission.toLowerCase().includes(key.toLowerCase());
+          } else {
+            return false;
+          }
+        })
       ));
   }
 }
