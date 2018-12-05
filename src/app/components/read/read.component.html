@@ -32,26 +32,39 @@
   <br/>
   <div *ngFor="let share of shares | async | paginate: { itemsPerPage: item, currentPage: page }" class="row" id="read-card">
     <div *ngIf="share.year == '1st'" class="col-md-2 col-12 align-middle">
-      <img src="../assets/img/UCIN-1st.png" height="125px"/>
+      <img src="../assets/img/UCIN-1st.png"/>
       <h5>Student</h5>
     </div>
     <div *ngIf="share.year == '2nd'" class="col-md-2 col-12  align-middle">
-      <img src="../assets/img/UCIN-2nd.png" height="125px"/>
+      <img src="../assets/img/UCIN-2nd.png" />
       <h5>Student</h5>
     </div>
     <div *ngIf="share.year == '3rd'" class="col-md-2 col-12  align-middle">
-      <img src="../assets/img/UCIN-3RD.png" height="125px"/>
+      <img src="../assets/img/UCIN-3RD.png" />
       <h5>Student</h5>
     </div>
-    <div *ngIf="share.year == '4TH'" class="col-md-2 col-12  align-middle">
-      <img src="../assets/img/UCIN-4TH.png" height="125px"/>
+    <div *ngIf="share.year == '4th'" class="col-md-2 col-12  align-middle">
+      <img src="../assets/img/UCIN-4TH.png" />
       <h5>Student</h5>
     </div>
-    <div *ngIf="share.year != '1st' && share.year != '2nd' && share.year != '3rd'" class="col-md-2 col-12  align-middle">
-      <img src="../assets/img/UCIN-peter.png" height="125px"/>
-      <h5>Not undergrad student</h5>
+    <div *ngIf="share.year == '4+'" class="col-md-2 col-12  align-middle">
+      <img src="../assets/img/UCIN-4plus.png" />
+      <h5>Student</h5>
+    </div>
+    <div *ngIf="share.year == 'Grad'" class="col-md-2 col-12  align-middle">
+      <img src="../assets/img/UCIN-grad.png" />
+      <h5>Student</h5>
+    </div>
+    <div *ngIf="share.year == 'Faculty'" class="col-md-2 col-12  align-middle">
+      <img src="../assets/img/UCIN-alum.png" />
+      <h5>Former Student</h5>
+    </div>
+    <div *ngIf="share.year == 'Other'" class="col-md-2 col-12  align-middle">
+      <img src="../assets/img/UCIN-peter.png" />
+      <h5>UCI Affiliate</h5>
     </div>
     <div class="col-md-10 col-12 ">
+      <hr />
       {{ share.submission }}
     </div>
   </div>
