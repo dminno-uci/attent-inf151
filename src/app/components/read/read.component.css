@@ -92,13 +92,22 @@
 
 
 #read-card {
-  border: 1px solid grey;
+  border: 1px solid #8080806b;
   padding: 20px;
   border-radius: .5rem;
   background-color: #ffffff;
   min-width: 750px;
   min-height: 200px;
   margin-bottom: 25px;
+}
+
+#read-card img {
+  height:125px;
+  width: auto;
+}
+
+#read-card h5 {
+  text-align: center;
 }
 
 @media screen and (max-width: 640px) {
@@ -108,6 +117,26 @@
     min-width: 375px;
     min-height: 200px;
     margin-bottom: 15px;
+  }
+
+  #read-card img {
+    height:90px;
+    width: auto;
+  }
+  #read-card h5 {
+    text-align: left;
+  }
+
+  #read-title-row {
+    padding: 40px 0 10px 0;
+  }
+
+  .search-container {
+    margin-top: 20px;
+  }
+
+  .search-button {
+    margin-top: 20px;
   }
 }
 

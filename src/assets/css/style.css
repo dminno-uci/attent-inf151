@@ -1,10 +1,11 @@
 body {
   background-color: #f1f2f6;
+  font-family: "Avenir";
 }
 
 .body-container {
   height: 100vh;
-  position: relative;
+  display: grid;
 }
 
 /* Start Nav Style */
@@ -12,7 +13,43 @@ body {
   padding: 20px 0 20px 0;
   background-color: #0063A4;
   color: white;
+  -webkit-box-shadow: 0 8px 6px -6px #777;
+  -moz-box-shadow: 0 8px 6px -6px #777;
+  box-shadow: 0 8px 6px -6px #777;
  }
+
+.effect8
+{
+  position:relative;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  -webkit-box-shadow:0 0 15px rgba(0,0,0,0.3);
+  -moz-box-shadow:0 0 15px rgba(0,0,0,0.3);
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+  top:10px;
+  bottom:10px;
+  left:0;
+  right:0;
+  -moz-border-radius:100px / 10px;
+  border-radius:100px / 10px;
+}
+.effect8:after
+{
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+  -moz-transform:skew(8deg) rotate(3deg);
+  -ms-transform:skew(8deg) rotate(3deg);
+  -o-transform:skew(8deg) rotate(3deg);
+  transform:skew(8deg) rotate(3deg);
+}
 
 .nav-pills .nav-link.active {
   background-color: #FFD301;
@@ -31,11 +68,8 @@ textarea {
 }
 
 .inner-body {
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-55%);
-  border: 1px solid grey;
+  margin: auto;
+  border: 1px solid #8080806b;
   padding: 65px 50px 50px 50px;
   border-radius: .5rem;
   background-color: #ffffff;

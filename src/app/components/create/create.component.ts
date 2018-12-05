@@ -10,6 +10,8 @@ import { rmp_data } from './data/data';
 })
 
 export class CreateComponent implements OnInit {
+  public studentTypes: string[] = ['1st', '2nd', '3rd', '4th', '4+', 'Grad', 'Alumni', 'Other'];
+  public showSuccess = false;
 
   angForm: FormGroup;
   constructor(private shareservice: ShareService, private fb: FormBuilder) {
@@ -29,6 +31,8 @@ export class CreateComponent implements OnInit {
     this.shareservice.addShare(dataObj);
 
     this.angForm.reset();
+    this.showSuccess = true;
+
   }
 
   // this method is a use-once-for-all method, just need to use for one time. Double
