@@ -11,10 +11,17 @@
     </li>
   </ul>
 </nav>
-<h2>
-  Submission Results:
-</h2>
-<br><br>
-<div class="results">
-<img src="/assets/img/test.png"><img>
+
+<div class="container" id="view-container">
+  <div class="justify-content-center logo-container" >
+    <img src="../../../assets/img/submission-data.png" width="500px"/>
+  </div>
+  <div class="row" id="data-row">
+    <div *ngFor="let image of images | async" class="col-6" id="image-container">
+      <div class="results effect8">
+        <img [src]="image" />
+      </div>
+    </div>
+  </div>
 </div>
+
