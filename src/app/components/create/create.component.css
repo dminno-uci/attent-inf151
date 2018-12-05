@@ -21,6 +21,11 @@
   #input-button {
     width:100%;
   }
+
+  .effect8 {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }
 
 #submission-input-error {

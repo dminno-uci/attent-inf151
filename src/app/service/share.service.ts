@@ -20,6 +20,10 @@ export class ShareService {
     return this.db.list(path, ref => ref.limitToLast(amount)).valueChanges();
   }
 
+  getImages(path, amount): Observable<any[]> {
+    return this.db.list(path, ref => ref.limitToLast(amount)).valueChanges();
+  }
+
   searchShares(path, key): Observable<any[]> {
     return this.db.list(path).valueChanges().pipe(
       // tap(val => console.log(val)),
