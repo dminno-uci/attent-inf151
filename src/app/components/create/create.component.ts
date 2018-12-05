@@ -6,7 +6,7 @@ import { rmp_data } from './data/data';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  styleUrls: ['./create.component.css', '../../app.component.css']
 })
 
 export class CreateComponent implements OnInit {
