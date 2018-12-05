@@ -30,7 +30,7 @@
   </div>
 
   <br/>
-  <div *ngFor="let share of shares | async | paginate: { itemsPerPage: item, currentPage: page }" class="row" id="read-card">
+  <div *ngFor="let share of shares | async | paginate: { itemsPerPage: item, currentPage: page }" class="row effect8" id="read-card">
     <div *ngIf="share.year == '1st'" class="col-md-2 col-12 align-middle">
       <img src="../assets/img/UCIN-1st.png"/>
       <h5>Student</h5>
