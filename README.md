@@ -10,6 +10,7 @@ npm install:
 1. angular/cli
 2. firebase angularfire2
 3. ngx-pagination
+4. express
 
 
 Root is /create
