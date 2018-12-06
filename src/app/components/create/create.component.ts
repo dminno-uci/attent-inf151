@@ -10,7 +10,7 @@ import { rmp_data } from './data/data';
 })
 
 export class CreateComponent implements OnInit {
-  public studentTypes: string[] = ['1st', '2nd', '3rd', '4th', '4+', 'Grad', 'Alumni', 'Other'];
+  public studentTypes: string[] = ['1st', '2nd', '3rd', '4th', '5+', 'Grad', 'Alumni', 'Other'];
   public showSuccess = false;
 
   angForm: FormGroup;
