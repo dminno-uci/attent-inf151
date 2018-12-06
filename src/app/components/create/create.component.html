@@ -11,16 +11,6 @@
     </li>
   </ul>
 </nav>
-<div *ngIf="angForm.controls['year'].invalid && (angForm.controls['year'].dirty || angForm.controls['year'].touched)" class="alert alert-danger" id="year-input-error">
-  <div *ngIf="angForm.controls['year'].errors.required">
-    Year is required.
-  </div>
-</div>
-<div *ngIf="angForm.controls['submission'].invalid && (angForm.controls['submission'].dirty || angForm.controls['submission'].touched)" class="alert alert-danger" id="submission-input-error">
-  <div *ngIf="angForm.controls['submission'].errors.required">
-    Submission is required.
-  </div>
-</div>
 <div class="container body-container">
   <div class="inner-body effect8" style="text-align:center">
     <div class="justify-content-center logo-container" >
@@ -47,6 +37,16 @@
               <button (click)="addShare(year.value, submission.value)" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary" id="input-button">Submit</button>
             </div>
           </form>
+          <div *ngIf="angForm.controls['year'].invalid && (angForm.controls['year'].dirty || angForm.controls['year'].touched)" class="alert alert-danger" id="year-input-error">
+            <div *ngIf="angForm.controls['year'].errors.required">
+              Year is required.
+            </div>
+          </div>
+          <div *ngIf="angForm.controls['submission'].invalid && (angForm.controls['submission'].dirty || angForm.controls['submission'].touched)" class="alert alert-danger" id="submission-input-error">
+            <div *ngIf="angForm.controls['submission'].errors.required">
+              Submission is required.
+            </div>
+          </div>
           <div *ngIf="showSuccess" class="alert alert-success" id="success-message">
             Submission received!
           </div>
