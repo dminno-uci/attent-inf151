@@ -27,11 +27,8 @@
     "angularfire2": "^5.1.1",
     "core-js": "^2.5.4",
     "csv-parser": "^2.1.0",
-<<<<<<< HEAD
-    "file-system": "^2.2.2",
-=======
     "express": "^4.16.4",
->>>>>>> master
+    "file-system": "^2.2.2",
     "firebase": "^5.5.9",
     "js-base64": "^2.4.9",
     "ngx-pagination": "^3.2.1",
